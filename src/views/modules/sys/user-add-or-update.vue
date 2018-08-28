@@ -111,7 +111,7 @@
       init (id) {
         this.dataForm.id = id || 0
         this.$http({
-          url: this.$http.adornUrl('/sys/role/select'),
+          url: this.$http.adornUrl('/sys/roles'),
           method: 'get',
           params: this.$http.adornParams()
         }).then(({data}) => {
@@ -124,7 +124,7 @@
         }).then(() => {
           if (this.dataForm.id) {
             this.$http({
-              url: this.$http.adornUrl(`/sys/user/info/${this.dataForm.id}`),
+              url: this.$http.adornUrl(`/sys/user/${this.dataForm.id}`),
               method: 'get',
               params: this.$http.adornParams()
             }).then(({data}) => {
@@ -145,8 +145,8 @@
         this.$refs['dataForm'].validate((valid) => {
           if (valid) {
             this.$http({
-              url: this.$http.adornUrl(`/sys/user/${!this.dataForm.id ? 'save' : 'update'}`),
-              method: 'post',
+              url: this.$http.adornUrl(`/sys/user`),
+              method: `${!this.dataForm.id ? 'post' : 'put'}`,
               data: this.$http.adornData({
                 'userId': this.dataForm.id || undefined,
                 'username': this.dataForm.userName,

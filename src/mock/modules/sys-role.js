@@ -17,7 +17,7 @@ for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
 export function list () {
   return {
     // isOpen: false,
-    url: '/sys/role/list',
+    url: '/sys/roles',
     type: 'get',
     data: {
       'msg': 'success',
@@ -37,7 +37,7 @@ export function list () {
 export function select () {
   return {
     // isOpen: false,
-    url: '/sys/role/select',
+    url: '/sys/role',
     type: 'get',
     data: {
       'msg': 'success',
@@ -51,7 +51,7 @@ export function select () {
 export function info () {
   return {
     // isOpen: false,
-    url: '/sys/role/info',
+    url: '/sys/role',
     type: 'get',
     data: {
       'msg': 'success',
@@ -65,7 +65,7 @@ export function info () {
 export function add () {
   return {
     // isOpen: false,
-    url: '/sys/role/save',
+    url: '/sys/role',
     type: 'post',
     data: {
       'msg': 'success',
@@ -78,8 +78,8 @@ export function add () {
 export function update () {
   return {
     // isOpen: false,
-    url: '/sys/role/update',
-    type: 'post',
+    url: '/sys/role',
+    type: 'put',
     data: {
       'msg': 'success',
       'code': 0
@@ -91,8 +91,8 @@ export function update () {
 export function del () {
   return {
     // isOpen: false,
-    url: '/sys/role/delete',
-    type: 'post',
+    url: '/sys/role',
+    type: 'delete',
     data: {
       'msg': 'success',
       'code': 0

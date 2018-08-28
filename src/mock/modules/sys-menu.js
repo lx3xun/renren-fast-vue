@@ -503,7 +503,7 @@ var navDataList = [
 export function nav () {
   return {
     // isOpen: false,
-    url: '/sys/menu/nav',
+    url: '/sys/menu/navs',
     type: 'get',
     data: {
       'msg': 'success',
@@ -552,7 +552,7 @@ export function nav () {
 export function list () {
   return {
     // isOpen: false,
-    url: '/sys/menu/list',
+    url: '/sys/menus',
     type: 'get',
     data: dataList
   }
@@ -564,7 +564,7 @@ export function select () {
   dataList = dataList.concat(dataList[0].list)
   return {
     // isOpen: false,
-    url: '/sys/menu/select',
+    url: '/sys/menu',
     type: 'get',
     data: {
       'msg': 'success',
@@ -578,7 +578,7 @@ export function select () {
 export function info () {
   return {
     // isOpen: false,
-    url: '/sys/menu/info',
+    url: '/sys/menu',
     type: 'get',
     data: {
       'msg': 'success',
@@ -592,7 +592,7 @@ export function info () {
 export function add () {
   return {
     // isOpen: false,
-    url: '/sys/menu/save',
+    url: '/sys/menu',
     type: 'post',
     data: {
       'msg': 'success',
@@ -605,8 +605,8 @@ export function add () {
 export function update () {
   return {
     // isOpen: false,
-    url: '/sys/menu/update',
-    type: 'post',
+    url: '/sys/menu',
+    type: 'put',
     data: {
       'msg': 'success',
       'code': 0
@@ -618,8 +618,8 @@ export function update () {
 export function del () {
   return {
     // isOpen: false,
-    url: '/sys/menu/delete',
-    type: 'post',
+    url: '/sys/menu',
+    type: 'delete',
     data: {
       'msg': 'success',
       'code': 0

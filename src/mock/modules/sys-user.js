@@ -19,7 +19,7 @@ for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
 export function list () {
   return {
     // isOpen: false,
-    url: '/sys/user/list',
+    url: '/sys/users',
     type: 'get',
     data: {
       'msg': 'success',
@@ -39,7 +39,7 @@ export function list () {
 export function info () {
   return {
     // isOpen: false,
-    url: '/sys/user/info',
+    url: '/sys/user',
     type: 'get',
     data: {
       'msg': 'success',
@@ -66,7 +66,7 @@ export function updatePassword () {
 export function add () {
   return {
     // isOpen: false,
-    url: '/sys/user/save',
+    url: '/sys/user',
     type: 'post',
     data: {
       'msg': 'success',
@@ -79,8 +79,8 @@ export function add () {
 export function update () {
   return {
     // isOpen: false,
-    url: '/sys/user/update',
-    type: 'post',
+    url: '/sys/user',
+    type: 'put',
     data: {
       'msg': 'success',
       'code': 0
@@ -92,8 +92,8 @@ export function update () {
 export function del () {
   return {
     // isOpen: false,
-    url: '/sys/user/delete',
-    type: 'post',
+    url: '/sys/user',
+    type: 'delete',
     data: {
       'msg': 'success',
       'code': 0

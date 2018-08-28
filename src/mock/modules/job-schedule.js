@@ -20,7 +20,7 @@ for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
 export function list () {
   return {
     // isOpen: false,
-    url: '/sys/schedule/list',
+    url: '/sys/schedules',
     type: 'get',
     data: {
       'msg': 'success',
@@ -40,7 +40,7 @@ export function list () {
 export function info () {
   return {
     // isOpen: false,
-    url: '/sys/schedule/info',
+    url: '/sys/schedule',
     type: 'get',
     data: {
       'msg': 'success',
@@ -54,7 +54,7 @@ export function info () {
 export function add () {
   return {
     // isOpen: false,
-    url: '/sys/schedule/save',
+    url: '/sys/schedule',
     type: 'post',
     data: {
       'msg': 'success',
@@ -67,8 +67,8 @@ export function add () {
 export function update () {
   return {
     // isOpen: false,
-    url: '/sys/schedule/update',
-    type: 'post',
+    url: '/sys/schedule',
+    type: 'put',
     data: {
       'msg': 'success',
       'code': 0
@@ -80,8 +80,8 @@ export function update () {
 export function del () {
   return {
     // isOpen: false,
-    url: '/sys/schedule/delete',
-    type: 'post',
+    url: '/sys/schedule',
+    type: 'delete',
     data: {
       'msg': 'success',
       'code': 0

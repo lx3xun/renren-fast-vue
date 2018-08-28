@@ -107,7 +107,7 @@
         this.$refs['dataForm'].validate((valid) => {
           if (valid) {
             this.$http({
-              url: this.$http.adornUrl('/sys/oss/saveConfig'),
+              url: this.$http.adornUrl('/sys/oss/config'),
               method: 'post',
               data: this.$http.adornData(this.dataForm)
             }).then(({data}) => {

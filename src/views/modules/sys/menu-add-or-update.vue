@@ -127,7 +127,7 @@
       init (id) {
         this.dataForm.id = id || 0
         this.$http({
-          url: this.$http.adornUrl('/sys/menu/select'),
+          url: this.$http.adornUrl('/sys/menu'),
           method: 'get',
           params: this.$http.adornParams()
         }).then(({data}) => {
@@ -144,7 +144,7 @@
           } else {
             // 修改
             this.$http({
-              url: this.$http.adornUrl(`/sys/menu/info/${this.dataForm.id}`),
+              url: this.$http.adornUrl(`/sys/menu/${this.dataForm.id}`),
               method: 'get',
               params: this.$http.adornParams()
             }).then(({data}) => {
@@ -180,8 +180,8 @@
         this.$refs['dataForm'].validate((valid) => {
           if (valid) {
             this.$http({
-              url: this.$http.adornUrl(`/sys/menu/${!this.dataForm.id ? 'save' : 'update'}`),
-              method: 'post',
+              url: this.$http.adornUrl('/sys/menu'),
+              method: `${!this.dataForm.id ? 'post' : 'put'}`,
               data: this.$http.adornData({
                 'menuId': this.dataForm.id || undefined,
                 'type': this.dataForm.type,

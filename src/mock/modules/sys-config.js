@@ -15,7 +15,7 @@ for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
 export function list () {
   return {
     // isOpen: false,
-    url: '/sys/config/list',
+    url: '/sys/configs',
     type: 'get',
     data: {
       'msg': 'success',
@@ -35,7 +35,7 @@ export function list () {
 export function info () {
   return {
     // isOpen: false,
-    url: '/sys/config/info',
+    url: '/sys/config',
     type: 'get',
     data: {
       'msg': 'success',
@@ -49,7 +49,7 @@ export function info () {
 export function add () {
   return {
     // isOpen: false,
-    url: '/sys/config/save',
+    url: '/sys/config',
     type: 'post',
     data: {
       'msg': 'success',
@@ -62,8 +62,8 @@ export function add () {
 export function update () {
   return {
     // isOpen: false,
-    url: '/sys/config/update',
-    type: 'post',
+    url: '/sys/config',
+    type: 'put',
     data: {
       'msg': 'success',
       'code': 0
@@ -75,8 +75,8 @@ export function update () {
 export function del () {
   return {
     // isOpen: false,
-    url: '/sys/config/delete',
-    type: 'post',
+    url: '/sys/config',
+    type: 'delete',
     data: {
       'msg': 'success',
       'code': 0

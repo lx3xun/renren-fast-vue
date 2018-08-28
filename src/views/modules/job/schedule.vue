@@ -135,7 +135,7 @@
       getDataList () {
         this.dataListLoading = true
         this.$http({
-          url: this.$http.adornUrl('/sys/schedule/list'),
+          url: this.$http.adornUrl('/sys/schedules'),
           method: 'get',
           params: this.$http.adornParams({
             'page': this.pageIndex,
@@ -186,8 +186,8 @@
           type: 'warning'
         }).then(() => {
           this.$http({
-            url: this.$http.adornUrl('/sys/schedule/delete'),
-            method: 'post',
+            url: this.$http.adornUrl('/sys/schedule'),
+            method: 'delete',
             data: this.$http.adornData(ids, false)
           }).then(({data}) => {
             if (data && data.code === 0) {
